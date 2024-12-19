@@ -4,7 +4,7 @@ This is a boilerplate to create Lume themes
 
 ## Instructions
 
-- Clone this repo
+- Clone this repo or click the "Use this template" button on GitHub.
 - Update dependencies with `deno task lume upgrade`.
 - Change the files in the `src` folder.
 - Edit the `plugins.ts` file to add more plugins to your theme.
