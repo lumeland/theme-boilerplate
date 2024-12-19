@@ -1,0 +1,7 @@
+@import "css/reset.css";
+
+body {
+  max-width: 30em;
+  margin: auto;
+  padding: 2rem;
+}

@@ -1,0 +1,9 @@
+lang: en
+
+metas:
+  site: Lume site
+  twitter: ""
+  fediverse: ""
+  icon: /uploads/favicon.svg
+  lang: =lang
+  generator: true
