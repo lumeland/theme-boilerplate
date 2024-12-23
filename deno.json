@@ -1,7 +1,7 @@
 {
   "imports": {
     "lume/": "https://deno.land/x/lume@v2.4.3/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.7.3/"
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.7.7/"
   },
   "lock": false,
   "tasks": {
@@ -15,23 +15,7 @@
     }
   },
   "compilerOptions": {
-    "types": [
-      "lume/types.ts"
-    ]
+    "types": ["lume/types.ts"]
   },
-  "lint": {
-    "exclude": [
-      "./_site"
-    ],
-    "rules": {
-      "tags": [
-        "recommended"
-      ]
-    }
-  },
-  "fmt": {
-    "exclude": [
-      "./_site"
-    ]
-  }
+  "exclude": ["./_site"]
 }
