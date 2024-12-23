@@ -4,12 +4,9 @@
   box-sizing: border-box;
 }
 
-html {
-  font-family: system-ui, sans-serif;
-  line-height: 1.4;
-}
-
 body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -23,11 +20,7 @@ pre {
 
 button,
 input,
-optgroup,
 select,
 textarea {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.4;
-  margin: 0;
+  font: inherit;
 }
