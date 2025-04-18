@@ -15,6 +15,9 @@ This is a boilerplate to create Lume themes
   [changelog](https://github.com/oscarotero/keep-a-changelog) library:
   - Run `deno task changelog --publish` to publish the current version.
   - Run `deno task changelog --create 0.2.0` to create the next version.
+- The `test` folder allows to test the theme as if it were loaded remotely.
+  - Enter in the `test` folder and run `deno task serve`. If it doesn't fail,
+    the theme works correctly.
 - Publish the theme on [deno.land/x](https://deno.land/x).
-- If you create a theme, please
-  [create a new issue and let me know!](https://github.com/lumeland/themes/issues).
+- To include the theme in [lume.land/themes](https://lume.land/themes/),
+  [create a new issue here](https://github.com/lumeland/themes/issues).
