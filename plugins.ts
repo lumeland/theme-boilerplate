@@ -1,6 +1,4 @@
 import lightningcss from "lume/plugins/lightningcss.ts";
-import minifyHTML from "lume/plugins/minify_html.ts";
-import checkUrls from "lume/plugins/check_urls.ts";
 import basePath from "lume/plugins/base_path.ts";
 import metas from "lume/plugins/metas.ts";
 import { Options as SitemapOptions, sitemap } from "lume/plugins/sitemap.ts";
@@ -27,8 +25,6 @@ export default function (userOptions?: Options) {
   return (site: Lume.Site) => {
     site
       .use(lightningcss())
-      .use(minifyHTML())
-      .use(checkUrls())
       .use(basePath())
       .use(metas())
       .use(sitemap(options.sitemap))
