@@ -23,11 +23,13 @@ export default function (userOptions?: Options) {
   const options = merge(defaults, userOptions);
 
   return (site: Lume.Site) => {
-    site.use(lightningcss())
+    site
+      .use(lightningcss())
       .use(basePath())
       .use(metas())
       .use(sitemap(options.sitemap))
       .use(favicon(options.favicon))
-      .copy("uploads");
+      .add("uploads")
+      .add("style.css");
   };
 }

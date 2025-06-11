@@ -1,7 +1,8 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.5.3/",
-    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.11.3/"
+    "lume/": "https://deno.land/x/lume@v3.0.2/",
+    "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.11.5/",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
   },
   "lock": false,
   "tasks": {
@@ -9,20 +10,20 @@
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "cms": "deno task lume cms",
+    "update-deps": "deno run -A --quiet 'https://deno.land/x/nudd@v0.2.10/cli.ts' update plugins.ts deno.json",
     "changelog": {
       "description": "Run the changelog utility to format the CHANGELOG.md file",
-      "command": "deno run --allow-read --allow-write https://deno.land/x/changelog@v2.5.3/bin.ts"
+      "command": "deno run --allow-read --allow-write https://deno.land/x/changelog@v2.6.2/bin.ts"
     }
   },
   "compilerOptions": {
-    "types": [
-      "lume/types.ts"
-    ]
+    "types": ["lume/types.ts"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "lume"
   },
-  "exclude": [
-    "./_site"
-  ],
-  "unstable": [
-    "temporal"
-  ]
+  "exclude": ["./_site"],
+  "unstable": ["temporal"],
+  "lint": {
+    "plugins": ["https://deno.land/x/lume@v3.0.2/lint.ts"]
+  }
 }
