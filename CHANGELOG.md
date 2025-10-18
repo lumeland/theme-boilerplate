@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.3.0] - 2025-10-18
+### Changed
+- Migrated to Lume 3.1
+- Use glob patterns with `site.remote()` to automatically configure all files in the `src` folder as remote files.
+
 ## [0.2.0] - 2025-06-11
 Migrated to Lume 3.
 
@@ -27,5 +32,6 @@ Migrated to Lume 3.
 ## [0.1.0] - 2025-04-18
 First version
 
+[0.3.0]: https://github.com/lumeland/theme-boilerplate/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/lumeland/theme-boilerplate/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/lumeland/theme-boilerplate/releases/tag/v0.1.0
