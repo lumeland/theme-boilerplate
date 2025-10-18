@@ -24,16 +24,6 @@
     }
   },
   "compilerOptions": {
-<<<<<<< HEAD
-    "types": ["lume/types.ts"],
-    "jsx": "react-jsx",
-    "jsxImportSource": "lume"
-  },
-  "exclude": ["./_site"],
-  "unstable": ["temporal"],
-  "lint": {
-    "plugins": ["https://deno.land/x/lume@v3.0.2/lint.ts"]
-=======
     "types": [
       "lume/types.ts"
     ],
@@ -81,6 +71,5 @@
         "no-import-prefix"
       ]
     }
->>>>>>> d0b5961 (update theme template to lume 3.1)
   }
 }
