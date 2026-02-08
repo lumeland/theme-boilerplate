@@ -31,7 +31,8 @@
     "jsxImportSource": "lume"
   },
   "exclude": [
-    "./_site"
+    "./_site",
+    "./CHANGELOG.md"
   ],
   "unstable": [
     "temporal",
