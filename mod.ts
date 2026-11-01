@@ -1,15 +1,22 @@
-import plugins, { Options } from "./plugins.ts";
+import basePath from "@lumeland/plugin-base-path";
+import lumeCms from "@lumeland/plugin-cms";
+import cms from "./cms.ts";
 
-import "lume/types.ts";
+export interface Options {}
 
-export type { Options } from "./plugins.ts";
-
-export default function (options: Partial<Options> = {}) {
+export default function (options?: Options) {
   return (site: Lume.Site) => {
-    // Configure the site
-    site.use(plugins(options));
+    site.use(basePath());
+    site.use(lumeCms({ cms }));
 
-    // Add the files needed for the theme
-    site.remote("/", import.meta.resolve("./src"), ["/**/*"]);
+    // Add remote files
+    site.remote("/", import.meta.resolve("./src"), ["_includes/**"]);
   };
 }
+
+export const setup: Lume.Archetype = function* () {
+  yield {
+    url: import.meta.resolve("./src"),
+    files: ["_data/*", "files/*"],
+  };
+};
